@@ -1,0 +1,33 @@
+CONFIG_NAME: 'DAMSM_bs128'
+
+DATASET_NAME: 'mmceleba'
+DATA_DIR: '../../data/face/multi_model_celeba'
+IMG_DIR: 'images_512'
+WORKERS: 0
+
+TREE:
+    BRANCH_NUM: 1
+    BASE_SIZE: 299
+
+TRAIN:
+    FLAG: True
+    NET_E: ''  # '../DAMSMencoders/coco/text_encoder100.pth'
+    BATCH_SIZE: 128  # 16 better than 32
+    MAX_EPOCH: 600
+    SNAPSHOT_INTERVAL: 10
+    ENCODER_LR: 0.0002  # 0.0002best; 0.002good  # 2e-4 better than 2e-3
+    RNN_GRAD_CLIP: 0.25
+    GRAD_ACCU_STEPS: 2
+    LOSS_REDUCTION: 'sum'
+    SMOOTH:
+        GAMMA1: 4.0  # 1,2,5 good 4 best  10&100bad
+        GAMMA2: 5.0
+        GAMMA3: 10.0  # 10good 1&100bad
+
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
+    WORDS_NUM: 30
+    CAPTIONS_PKL: 'captions_BERT_mmceleba.pickle'
+    USE_PRE_EMB: True

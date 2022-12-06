@@ -1,0 +1,31 @@
+CONFIG_NAME: 'baseline'
+
+DATASET_NAME: 'Eval_For_mmceleba'
+DATA_DIR: '/home/pengjun/dxx/baseline/multi_model_celeba'
+MU_SIG: '/home/pengjun/code/text2face/pytorch/eval/FID/mmceleba_train.npz'
+IMG_DIR: 'images_512'
+WORKERS: 1
+
+TREE:
+    BASE_SIZE: 256
+
+
+TRAIN:
+    FLAG: False
+    NET_G: '/home/pengjun/dxx/baseline/output/mmceleba_MLP(AV)_FFN_concat_fourier_202204111642/Model/ckpt_0018.pth'
+    BATCH_SIZE: 4
+    NET_E: '/home/pengjun/dxx/baseline/DAMSMencoders/DAMSM_bs128_202108310052/Model/best_text_encoder.pth'  # '../../DAMSMencoders/mmceleba_202108310052/text_encoder23.pth'
+
+
+GAN:
+    Z_DIM: 100
+    C_DIM: 100
+    W_DIM: 512
+    N_MLP: 8
+
+TEXT:
+    CAPTIONS_PKL: 'captions_BERT_mmceleba.pickle'
+    CAPTIONS_PER_IMAGE: 10
+    EMBEDDING_DIM: 256
+    WORDS_NUM: 30
+    USE_PRE_EMB: True
