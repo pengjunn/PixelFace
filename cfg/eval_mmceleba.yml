@@ -1,8 +1,8 @@
-CONFIG_NAME: 'baseline'
+CONFIG_NAME: 'pixelface'
 
-DATASET_NAME: 'Eval_For_mmceleba'
-DATA_DIR: '/home/pengjun/dxx/baseline/multi_model_celeba'
-MU_SIG: '/home/pengjun/code/text2face/pytorch/eval/FID/mmceleba_train.npz'
+DATASET_NAME: 'mmceleba'
+DATA_DIR: '/path/to/multi_model_celeba'
+MU_SIG: '/path/to/mmceleba_val.npz'
 IMG_DIR: 'images_512'
 WORKERS: 1
 
@@ -12,9 +12,9 @@ TREE:
 
 TRAIN:
     FLAG: False
-    NET_G: '/home/pengjun/dxx/baseline/output/mmceleba_MLP(AV)_FFN_concat_fourier_202204111642/Model/ckpt_0018.pth'
+    NET_G: '/path/to/checkpoint'
     BATCH_SIZE: 4
-    NET_E: '/home/pengjun/dxx/baseline/DAMSMencoders/DAMSM_bs128_202108310052/Model/best_text_encoder.pth'  # '../../DAMSMencoders/mmceleba_202108310052/text_encoder23.pth'
+    NET_E: '/path/to/text_encoder'
 
 
 GAN:
