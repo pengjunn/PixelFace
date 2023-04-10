@@ -1,9 +1,9 @@
-CONFIG_NAME: 'MLP(AV)_FFN_concat_fourier'
+CONFIG_NAME: 'pixelface'
 
 DATASET_NAME: 'mmceleba'
-DATA_DIR: '/home/pengjun/dxx/baseline/multi_model_celeba'
+DATA_DIR: 'path/to/multi_model_celeba'
 IMG_DIR: 'images_512'
-MU_SIG: '/home/pengjun/code/text2face/pytorch/eval/FID/mmceleba_train.npz'
+MU_SIG: 'path/to/mmceleba_train.npz'
 WORKERS: 4
 
 TREE:
@@ -11,7 +11,7 @@ TREE:
 
 TRAIN:
   FLAG: True
-  NET_G: '/home/pengjun/dxx/baseline/output/multi_stage_Upsample_10-19/Model/ckpt_0019.pth' #'/home/pengjun/dxx/baseline/DAMSMencoders/DAMSM_bs128_202108310052/Model/best_image_encoder.pth'  # '../models/bird_AttnGAN2.pth'
+  NET_G: '' 
   B_NET_D: True
   BATCH_SIZE: 32  # 22
   MAX_EPOCH: 100
@@ -19,7 +19,7 @@ TRAIN:
   DISCRIMINATOR_LR: 0.002
   GENERATOR_LR: 0.002
   #
-  NET_E: '/home/pengjun/dxx/baseline/DAMSMencoders/DAMSM_bs128_202108310052/Model/best_text_encoder.pth' # '../../DAMSMencoders/mmceleba_202108310052/text_encoder23.pth'
+  NET_E: 'path/to/text_encoder'
   SMOOTH:
     GAMMA1: 4.0  # 1,2,5 good 4 best  10&100bad
     GAMMA2: 5.0
@@ -40,7 +40,7 @@ GAN:
   
 TEXT:
   CAPTIONS_PKL: 'captions_BERT_mmceleba.pickle'
-  # CAPTIONS_PER_IMAGE: 10  # 1 face, 5 coco, 10 bird
+  CAPTIONS_PER_IMAGE: 10
   EMBEDDING_DIM: 256
   WORDS_NUM: 30
   USE_PRE_EMB: True
