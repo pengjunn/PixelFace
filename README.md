@@ -3,10 +3,9 @@
 <!-- [![Paper](http://img.shields.io/badge/paper-arxiv.2010.04513-blue.svg)]() -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Under construction.
 
 ### Dataset
-1. MMCelebA-HQ: [image](https://github.com/weihaox/Multi-Modal-CelebA-HQ), [pickle](https://drive.google.com/file/d/1jV99y6iSdoCYDRN_CeqIN0tPnAc5cTpW/view?usp=share_link), [json](https://drive.google.com/file/d/1MZda_8w96EAOWjwvGyTQBPzP1Dl9afdl/view?usp=share_link)
+MMCelebA-HQ: [image](https://github.com/weihaox/Multi-Modal-CelebA-HQ), [pickle](https://drive.google.com/file/d/1jV99y6iSdoCYDRN_CeqIN0tPnAc5cTpW/view?usp=share_link), [json](https://drive.google.com/file/d/1MZda_8w96EAOWjwvGyTQBPzP1Dl9afdl/view?usp=share_link)
 
 ### Pretraiend Models
 1. [Text Encoder](https://drive.google.com/file/d/1I-_KA5vWSYS1GpPMCYtQXIjNJ47RRQGx/view?usp=share_link)
